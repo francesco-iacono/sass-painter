@@ -1,0 +1,80 @@
+$headerTopHeight: 40px;
+$headerBottomHeight: 60px;
+
+header {
+  width: 100%;
+  background-color: $headerColor;
+}
+.header-top {
+  @include wrapper;
+  height: $headerTopHeight;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  ul {
+    height: 100%;
+    li {
+      display: inline-block;
+      line-height: $headerTopHeight;
+      padding-left: 15px;
+      i {
+        color: #009CFF;
+        font-size: 14px;
+        margin-right: 5px;
+      }
+      a {
+        color: $colorGray;
+        font-size: 13px;
+        text-decoration: none;
+        &:hover {
+          color: $colorWhite;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  select {
+    margin: 0 10px;
+  }
+}
+.header-bottom {
+  @include wrapper;
+  height: $headerBottomHeight;
+  display: flex;
+
+  .logo{
+    display: flex;
+    align-items: center;
+    width: 10%;
+    img {
+      width: 70%;
+    }
+  }
+  .header-menu {
+    width: 90%;
+    ul {
+      height: 100%;
+      li {
+        display: inline-block;
+        line-height: $headerBottomHeight;
+        padding-right: 20px;
+        padding-left: 2px;
+        cursor: pointer;
+        a {
+          color: #ffff;
+          font-size: 14px;
+        }
+        i {
+          font-size: 10px;
+          color: $colorGray;
+        }
+        &:hover {
+          background-color: #ffff;
+        }
+        &:hover a {
+          color: $headerColor;
+        }
+      }
+    }
+  }
+}
